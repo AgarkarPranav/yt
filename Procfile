@@ -1,0 +1,1 @@
+web: gunicorn uniq.wsgi --log-file -
