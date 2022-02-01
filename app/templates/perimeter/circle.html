@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles/peri/circle.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+</head>
+<center><h1 class="hCard">Find Circumference of Circle</h1></center>
+<div class="card">
+	<form action="/peri/circleres" method="GET">
+		<input type="text" name="radius" value="{{val}}" class="circleinpt" placeholder="Enter Radius" required>
+		<input type="submit"><br>
+		Circumference of circle is : {{result}}<br>
+		Circumference in fraction : {{fraction}}
+	</form>
+</div>
+{% endblock content %}

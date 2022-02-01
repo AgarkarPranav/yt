@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -11,7 +12,7 @@ nav{
 	align-items: center;
 	min-height: 8vh;
 	background: #000;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Source Code Pro', monospace;
 }
 
 .logo{
@@ -116,9 +117,9 @@ nav{
 
 .devault{
 	padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #27272a;
-    border: solid 2px burlywood;
+    border: solid 2px #D9D7F1;
     transition: .5s all ease;
 }
 .devault:hover{
@@ -126,12 +127,20 @@ nav{
 }
 .active{
 	padding: 10px;
-    border-radius: 5px;
-    background-color: #021a36;
-    border: solid 2px orangered;
+    border-radius: 10px;
+    background-color: #D9D7F1;
+    border: solid 2px #D9D7F1;
     transition: .5s all ease;
+    color: black;
 }
 .active:hover{
 	background-color: #27272a;
 	border: 2px solid lawngreen;
+	color: white;
+}
+#ht{
+	color: black;
+}
+#ht:hover{
+	color: white;
 }
