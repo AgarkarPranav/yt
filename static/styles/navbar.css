@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');*/
+/*@import url('https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip');*/
+/* CSS */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
@@ -12,14 +17,16 @@ nav{
 	align-items: center;
 	min-height: 8vh;
 	background: #000;
-	font-family: 'Source Code Pro', monospace;
+	font-family: 'Fira Code', monospace;
 }
 
 .logo{
 	color: rgb(226, 226, 226);
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	font-size: 20px;
+	font-size: 28px;
+	font-weight: bold;
+	font-family: 'Teko', sans-serif;
 	border-bottom: 2px solid goldenrod;
 }
 
@@ -36,9 +43,9 @@ nav{
 .nav-links a{
 	color: rgb(226, 226, 226);
 	text-decoration: none;
-	letter-spacing: 3px;
-	font-weight: bold;
-	font-size: 14px;
+	letter-spacing: 0.5px;
+	font-weight: 500;
+	font-size: 15px;
 	margin: 5px;
 }
 
@@ -116,7 +123,7 @@ nav{
 }
 
 .devault{
-	padding: 10px;
+	padding: 8px;
     border-radius: 10px;
     background-color: #27272a;
     border: solid 2px #D9D7F1;
@@ -126,7 +133,7 @@ nav{
 	border: 2px solid lawngreen;
 }
 .active{
-	padding: 10px;
+	padding: 8px;
     border-radius: 10px;
     background-color: #D9D7F1;
     border: solid 2px #D9D7F1;
@@ -143,4 +150,8 @@ nav{
 }
 #ht:hover{
 	color: white;
+}
+
+@supports (font-variation-settings: normal) {
+  nav { font-family: 'Fira Code VF', monospace; }
 }

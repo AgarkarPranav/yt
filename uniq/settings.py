@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tjtq#gx@zz79ndla4-0!%rv_5ix9^evkpznrwq2^rsd7x%#$-#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['prcalculator.herokuapp.com','0.0.0.0','*']
 
