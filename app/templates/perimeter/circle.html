@@ -9,11 +9,21 @@
 <h1 class="hCard">Find Circumference of Circle</h1>
 <div class="card">
 	<form action="/peri/circleres" method="GET">
-		<input type="text" name="radius" value="{{val}}" class="circleinpt" autofocus placeholder="Enter Radius" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
-		<button type="submit" class="submitbtn">Submit</button><br>
+		<input type="number" id="myInput" name="radius" value="{{val}}" class="circleinpt" step=".01" autofocus placeholder="Enter Radius" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+		<input type="submit" id="myBtn" class="submitbtn" /><br>
 		<p>Circumference of circle is : {{result}}</p>
 		<p>Circumference in fraction : {{fraction}}</p>
 	</form>
 </div>
+
+<script>
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
 </body>
 {% endblock content %}
