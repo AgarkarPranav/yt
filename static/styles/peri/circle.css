@@ -5,15 +5,20 @@
 body{
 	font-family: 'Fira Code', monospace;
 }
+.allCards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	transition: .3s ease-in;
+}
+
 .card{
 	margin-left: 2vh;
 	margin-right: 2vh;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding: 10px;
-	/*min-height: 25vh;*/
-	/*max-height: 30vh;*/
-	height: 150px;
+	height: 200px;
 	border-top-right-radius: 0px;
 	border-top-left-radius: 0px;
 	border-bottom-left-radius: 10px;
@@ -26,6 +31,7 @@ body{
 	transition: .3s ease-in;
 	max-width: 400px;
 	min-width: 260px;
+	flex: 1;
 }
 
 .hCard{
@@ -64,10 +70,11 @@ body{
 	color: white;
 	border-radius: 10px;
 	font-family: 'Fira Code', monospace;
+	margin-bottom: 10px;
 }
 
 .circleinpt:focus{
-	border-color: goldenrod;
+	border-color: #89CFF0;
 }
 
 .submitbtn{
@@ -89,4 +96,7 @@ body{
 .submitbtn:hover{
 	background-color: #27272a;
 	color: white;
+}
+p{
+	margin-top: 10px;
 }
