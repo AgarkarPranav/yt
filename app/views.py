@@ -41,3 +41,20 @@ def radiusAndDiameter(request):
 	fracD = str(resD)
 	fractionalvalueD = fractions.Fraction(fracD).limit_denominator(7)
 	return render(request, "perimeter/circle.html", {'activeP':act,'idep':idh,'resultD':resD,'fractionD':fractionalvalueD,'valD':rD})
+
+def cirSectorRes(request):
+	theta = float(request.GET["theta"])
+	sec = float(request.GET["radiusSec"])
+	resSec =  two*pi*sec*theta/360+2*sec
+	act = 'active'
+	idh = 'ht'
+	fracSec = str(resSec)
+	fractionalvalueSec = fractions.Fraction(fracSec).limit_denominator(7)
+	return render(request, "perimeter/sector.html", {'activeP':act,'idep':idh,'resultSec':resSec,'fractionSec':fractionalvalueSec,'valSec':sec, 'theta':theta})
+
+
+def cirSector(request):
+	act = 'active'
+	idh = 'ht'
+	# css = 'style=color:black;'
+	return render(request, "perimeter/sector.html", {'activeP':act,'idep':idh})

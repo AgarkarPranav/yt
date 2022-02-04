@@ -2,10 +2,36 @@
 <head>
   <link rel="stylesheet" type="text/css" href="{% static 'styles/navbar.css' %}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+  <style type="text/css">
+    a{
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    a:focus{
+        outline: none !important;
+    }
+    .burger{
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    .burger:focus{
+        outline: none !important;
+    }
+  </style>
 </head>
 <nav>
   <div class="logo">
-    <h4>The Calculator</h4>
+    <h4><a href="/" class="lgo">The Calculator</a></h4>
   </div>
   <ul class="nav-links">
     <li><a href="/" class="{{activeH}} devault" id="{{ideh}}">Home</a></li>

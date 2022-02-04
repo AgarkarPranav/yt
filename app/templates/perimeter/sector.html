@@ -34,30 +34,22 @@
 <body>
 <div class="allCards">
 	<div class="mainCard">
-	<h1 class="hCard">Find Circumference of Circle</h1>
+	<h1 class="hCard">Find Perimeter of Sector of Circle</h1>
 	<div class="card">
-		<form action="/peri/circleres" method="GET">
-			<input autocomplete="off" type="number" id="myInput" name="radius" value="{{val}}" class="circleinpt" step=".000000000000000001" autofocus placeholder="Enter Radius" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+		<form action="/peri/sectorRes" method="GET">
+
+			<input autocomplete="off" type="number" id="" name="radiusSec" value="{{valSec}}" class="circleinpt" step=".000000000000000001" autofocus placeholder="Enter Radius" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+
+			<input autocomplete="off" type="number" id="myInput" name="theta" value="{{theta}}" class="circleinpt" step=".000000000000000001" autofocus placeholder="Enter Angle" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+
 			<button type="submit" id="myBtn" class="submitbtn">Go</button>
 			<a href="/peri/circle" id="myBtn" class="submitbtn">Clear</a>
-			<p>Circumference of circle is : {{result}}</p>
-			<p>Circumference in fraction : {{fraction}}</p>
+			<p>Circumference of circle is : {{resultSec}}</p>
+			<p>Circumference in fraction : {{fractionSec}}</p>
 		</form>
 	</div>
 	</div>
 
-	<div class="mainCard">
-	<h1 class="hCard">Find Radius of Circle</h1>
-	<div class="card">
-		<form action="/peri/circleRD" method="GET">
-			<input autocomplete="off" type="number" id="myInputD" name="circumference" value="{{valD}}" class="circleinpt" step=".000000000000000001" autofocus placeholder="Circumference" required onkeypress="return event.charCode >= 46 && event.charCode <= 57">
-			<button type="submit" id="myBtnD" class="submitbtn">Go</button>
-			<a href="/peri/circle" id="myBtnD" class="submitbtn">Clear</a>
-			<p>Radius of circle is : {{resultD}}</p>
-			<p>Radius in fraction : {{fractionD}}</p>
-		</form>
-	</div>
-	</div>
 </div>
 
 <script>
@@ -66,13 +58,6 @@ input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
    document.getElementById("myBtn").click();
-  }
-});
-var input = document.getElementById("myInputD");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtnD").click();
   }
 });
 </script>

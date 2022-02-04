@@ -51,7 +51,7 @@ body{
 	min-width: 260px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	font-size: clamp(1rem,2vw,21px);
+	font-size: clamp(1rem,2vw,20px);
 	text-align: center;
 }
 
@@ -92,6 +92,7 @@ body{
 	font-family: 'Fira Code', monospace;
 	cursor: pointer;
 	transition: .3s ease;
+	text-decoration: none;
 }
 .submitbtn:hover{
 	background-color: #27272a;
@@ -99,4 +100,8 @@ body{
 }
 p{
 	margin-top: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
